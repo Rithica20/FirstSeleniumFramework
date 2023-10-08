@@ -13,6 +13,7 @@ public class AccountsPageTest extends BaseTest {
     //precondition to do login
     @BeforeClass
     public void login(){
+
         accountPage = loginPage.login(AppConstants.USER_NAME,AppConstants.PASSWORD);
     }
     @Test(priority = 1)

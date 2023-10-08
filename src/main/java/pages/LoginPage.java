@@ -15,8 +15,6 @@ public class LoginPage {
     private ElementUtil elementUtil;
 
 
-
-
     private By email = By.name("email");
     private By password = By.name("password");
 

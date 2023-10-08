@@ -31,8 +31,23 @@ public class SearchResultsPageTest extends BaseTest {
         List<String> result=searchResultsPage.isMenuBarsExists();
         Assert.assertEquals(result,AppConstants.ALL_MENU_INSEARCH_RESULT);
     }
+//    @Test(priority = 4)
+//    public void doClickFirstProductTest(){
+//        searchResultsPage.doClickFirstProduct();
+//    }
     @Test(priority = 4)
-    public void doClickFirstProductTest(){
-        searchResultsPage.doClickFirstProduct();
+    public void getProductTextTest(){
+        String productName = searchResultsPage.getProductText();
+        Assert.assertEquals(productName,"macbook");
+    }
+    @Test(priority = 5)
+    public void getSearchResultsCountTest(){
+        int count = searchResultsPage.getSearchResultsCount();
+        Assert.assertEquals(count,3);
+    }
+    @Test(priority = 6)
+    public void selectProductTest(){
+        searchResultsPage.selectProduct("MacBook Pro");
+
     }
 }

@@ -15,8 +15,8 @@ public class SearchResultsPage {
     // public class constructor
     //public class methods
 
-    WebDriver driver;
-    ElementUtil elementUtil;
+    private WebDriver driver;
+    private ElementUtil elementUtil;
 
     private By searchResult = By.xpath("//div[@id='content']//h1");
 
@@ -24,6 +24,8 @@ public class SearchResultsPage {
     private By menuBars = By.xpath("//ul[@class='nav navbar-nav']/li/a");
 
     private By firstProduct = By.xpath("//h4//a[text()='MacBook']");
+    private By produtText = By.tagName("h1");
+    private By productResultCount = By.xpath("//div[@id='content']//img");
 
     public SearchResultsPage(WebDriver driver){
         this.driver = driver;
@@ -52,7 +54,25 @@ public class SearchResultsPage {
         }
         return availableMenu;
     }
-    public void doClickFirstProduct(){
-        elementUtil.visibilityofElementLocated(AppConstants.SHORT_TIME,firstProduct).click();
+//    public void doClickFirstProduct(){
+//        elementUtil.visibilityofElementLocated(AppConstants.SHORT_TIME,firstProduct).click();
+//    }
+
+    public String getProductText(){
+        String productText =  elementUtil.visibilityofElementLocated( AppConstants.SHORT_TIME,produtText).getText(); //Search - macbook
+        String actualProductText =   productText.split("-")[1].trim();
+        return actualProductText;//macbook
+
+    }
+
+    public  int getSearchResultsCount(){
+        int productCount =  elementUtil.visibilityofAllElementsLocated( AppConstants.MEDIUM_TIME,productResultCount).size();
+        System.out.println("total products for "+getProductText()+" are "+productCount);
+        return productCount;
+    }
+
+    public ProductInfoPage selectProduct(String productName){
+        elementUtil.doClick(By.linkText(productName));
+        return new ProductInfoPage(driver);//TTD approach
     }
 }

@@ -6,6 +6,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import pages.AccountPage;
 import pages.LoginPage;
+import pages.ProductInfoPage;
 import pages.SearchResultsPage;
 
 public class BaseTest {
@@ -13,6 +14,8 @@ public class BaseTest {
     protected LoginPage loginPage;
     protected AccountPage accountPage;
     protected SearchResultsPage searchResultsPage;
+
+    protected ProductInfoPage productInfoPage;
 
     @BeforeTest
     public void setup(){

@@ -52,7 +52,8 @@ public class AccountPage {
         return actuallinks;
     }
     public SearchResultsPage doSearch(String name){
-        elementUtil.visibilityofElementLocated(AppConstants.SHORT_TIME,search).sendKeys(name);
+        elementUtil.visibilityofElementLocated(AppConstants.MEDIUM_TIME,search).clear();
+        elementUtil.visibilityofElementLocated(AppConstants.MEDIUM_TIME,search).sendKeys(name);
         elementUtil.getElement(searchIcon).click();
         return new SearchResultsPage(driver);
     }
