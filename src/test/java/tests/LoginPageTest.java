@@ -30,7 +30,7 @@ public class LoginPageTest extends BaseTest {
     public void doLogin(){
 //        String url = loginPage.login(AppConstants.USER_NAME,AppConstants.PASSWORD);
 //        Assert.assertEquals(url,AppConstants.LOGIN_ACCOUNT_TITLLE);
-        accountPage = loginPage.login(AppConstants.USER_NAME,AppConstants.PASSWORD);
+        accountPage = loginPage.login(properties.getProperty("username"),properties.getProperty("password"));
         Assert.assertEquals(accountPage.getTitle(),AppConstants.LOGIN_ACCOUNT_TITLLE);
     }
 }

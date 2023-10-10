@@ -31,9 +31,9 @@ public class BaseTest {
 //        driver.manage().window().maximize();
 //        driver.manage().deleteAllCookies();
 //        driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
-       driverFactory =new DriverFactory();
-       properties = driverFactory.initProp();
-       driver = driverFactory.launchBrowser(properties);
+        driverFactory = new DriverFactory();
+        properties = driverFactory.initProp();
+        driver = driverFactory.launchBrowser(properties);
         loginPage =new LoginPage(driver);
     }
 
