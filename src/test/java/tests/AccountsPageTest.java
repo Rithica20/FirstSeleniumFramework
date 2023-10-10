@@ -14,7 +14,7 @@ public class AccountsPageTest extends BaseTest {
     @BeforeClass
     public void login(){
 
-        accountPage = loginPage.login(AppConstants.USER_NAME,AppConstants.PASSWORD);
+        accountPage = loginPage.login(properties.getProperty("username"),properties.getProperty("password"));
     }
     @Test(priority = 1)
     public void getTitleTest(){
