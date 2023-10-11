@@ -36,4 +36,5 @@ public class AccountsPageTest extends BaseTest {
         accountPage.doSearch("macbook");
 
     }
+
 }

@@ -19,7 +19,7 @@ public class LoginPage {
     private By password = By.name("password");
 
     private By loginBtn = By.xpath("//input[@value='Login']");
-
+    private By registerBtn =By.linkText("Continue");
     private By newCustomer = By.xpath("//h2[text()='New Customer']");
 
     public LoginPage(WebDriver driver) {
@@ -37,6 +37,11 @@ public class LoginPage {
     }
     public String getNewCustomer(){
         return elementUtil.doElementGetText(newCustomer);
+    }
+    public RegisterPage clickRegister(){
+        elementUtil.visibilityofElementLocated(AppConstants.SHORT_TIME,registerBtn).click();
+        elementUtil.title();
+        return new RegisterPage(driver);
     }
     public AccountPage login(String username, String loginpassword){
 //        driver.findElement(email).sendKeys(username);

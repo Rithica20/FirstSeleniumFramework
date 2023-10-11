@@ -7,7 +7,9 @@ import org.openqa.selenium.WebElement;
 import utils.ElementUtil;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class AccountPage {
     //1. private By locators
@@ -30,7 +32,7 @@ public class AccountPage {
     }
 
     public String getTitle(){
-       return elementUtil.title();
+        return elementUtil.title();
     }
 
     public List<String> isAccountHeadersExists(){
@@ -57,4 +59,5 @@ public class AccountPage {
         elementUtil.getElement(searchIcon).click();
         return new SearchResultsPage(driver);
     }
+
 }

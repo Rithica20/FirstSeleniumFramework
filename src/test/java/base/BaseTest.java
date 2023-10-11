@@ -5,10 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import pages.AccountPage;
-import pages.LoginPage;
-import pages.ProductInfoPage;
-import pages.SearchResultsPage;
+import org.testng.asserts.SoftAssert;
+import pages.*;
 
 import java.util.Properties;
 
@@ -23,6 +21,8 @@ public class BaseTest {
     DriverFactory driverFactory;
 
     protected Properties properties;
+   protected SoftAssert softAssert;
+   protected RegisterPage registerPage;
 
 
     @BeforeTest
@@ -32,6 +32,7 @@ public class BaseTest {
 //        driver.manage().deleteAllCookies();
 //        driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
         driverFactory = new DriverFactory();
+        softAssert=new SoftAssert();
         properties = driverFactory.initProp();
         driver = driverFactory.launchBrowser(properties);
         loginPage =new LoginPage(driver);

@@ -19,7 +19,7 @@ public class AppConstants {
     public final static String SEARCH_FOR_PRODUCT_RESULT = "Search - macbook";
 
     public final static List<String> ALL_MENU_INSEARCH_RESULT = Arrays.asList("Desktops","Laptops & Notebooks","Components","Tablets","Software","Phones & PDAs","Cameras","MP3 Players");
-
+    public final static String REGISTER_PAGE_URL_FRACTION ="https://naveenautomationlabs.com/opencart/index.php?route=account/success";
 
     public final static int LONG_TIME= 15;
     public final static int SHORT_TIME= 5;

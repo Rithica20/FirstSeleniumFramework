@@ -33,4 +33,9 @@ public class LoginPageTest extends BaseTest {
         accountPage = loginPage.login(properties.getProperty("username"),properties.getProperty("password"));
         Assert.assertEquals(accountPage.getTitle(),AppConstants.LOGIN_ACCOUNT_TITLLE);
     }
+    @Test(priority = 5)
+    public void doRegister(){
+       registerPage =loginPage.clickRegister();
+//       Assert.assertEquals("","");
+    }
 }
