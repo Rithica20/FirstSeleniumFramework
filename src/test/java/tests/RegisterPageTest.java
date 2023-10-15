@@ -12,20 +12,24 @@ public class RegisterPageTest extends BaseTest {
     public void doLogin(){
        registerPage = loginPage.clickRegister();
     }
+
+    public String email(){
+        return "opencart" + System.currentTimeMillis() + "@yopmail.com";
+    }
     @DataProvider
     public Object[][] customerData(){
         return new  Object[][]{
-                {"Rithi","B","rithi@gmail.com","9876643212","Rithica@123","Rithica@123"},
-                {"Sudhak","V","sudhak@gmail.com","9874543219","sudhakar@123","sudhakar@123"},
-                {"Sah","kumar","sah@gmail.com","9876543234","sahil@123","sahil@123"},
-                {"Fathu","n","fatuu@gmail.com","9876543215","fathu@123","fathu@123"}
+                {"Rithica","B","9876643212","Rithica@123","no"},
+                {"Sudhakar","V","9874543219","sudhakar@123","no"},
+                {"Sahil","kumar","9876543234","sahil@123","yes"},
+                {"Fathima","n","9876543215","fathu@123","yes"}
         };
     }
     @Test(dataProvider = "customerData",priority = 1)
-    public void doRegisterTest(String firstName,String lastName,String mail,String num,
-                               String password,String confrimpasswprd){
-       String url = registerPage.doRegisterNewCustomer(firstName,lastName,mail,num,password,confrimpasswprd);
-        Assert.assertEquals(url,AppConstants.REGISTER_PAGE_URL_FRACTION);
+    public void doRegisterTest(String firstName,String lastName,String num,
+                               String password,String subscribe){
+        Assert.assertTrue(registerPage.doRegisterNewCustomer(firstName,lastName,email(),num,password,subscribe));
+
     }
 }
 
