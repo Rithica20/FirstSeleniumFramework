@@ -1,0 +1,45 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+
+<!--<suite name="OpenCart Regression Suite" verbose="4"  thread-count="4" parallel="tests">-->
+
+<!--    <listeners>-->
+<!--        <listener class-name="com.qa.listeners.ExtentReportListener" />-->
+<!--        &lt;!&ndash;        <listener&ndash;&gt;-->
+<!--        &lt;!&ndash;                class-name="com.qa.opencart.listeners.TestAllureListener" />&ndash;&gt;-->
+<!--        &lt;!&ndash;        <listener&ndash;&gt;-->
+<!--        &lt;!&ndash;                class-name="com.qa.opencart.listeners.AnnotationTransformer" />&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        <listener&ndash;&gt;-->
+<!--        &lt;!&ndash;                class-name="com.qa.opencart.listeners.ItextPdfListener" />&ndash;&gt;-->
+
+<!--    </listeners>-->
+
+
+<!--    <test name="LoginPageTest">-->
+<!--        <classes>-->
+<!--            <class name="com.qa.tests.LoginPageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="AccountsPageTest">-->
+
+<!--        <classes>-->
+<!--            <class name="com.qa.tests.AccountsPageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ProductInfoPageTest">-->
+<!--        <classes>-->
+<!--            <class name="com." />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="RegisterPageTest">-->
+<!--        <classes>-->
+<!--            <class name="com.qa.tests.RegisterPageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--</suite>-->
